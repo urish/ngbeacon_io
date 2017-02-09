@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "public",
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://medium.com/@urish/introducing-ng-beacons-344d79370593#.x6uhqakpg",
+        "type": 302
+      },
+      {
+        "source": "/config",
+        "destination": "https://urish.github.io/ng-beacon-app",
+        "type": 302
+      }
+    ]
+  }
+}
