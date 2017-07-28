@@ -1,0 +1,14 @@
+{
+  "name": "ngbeacon_io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:urish/ngbeacon_io.git",
+  "author": "Uri Shaked <uri@salsa4fun.co.il>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "firebase-tools": "^3.9.1"
+  }
+}
