@@ -1,10 +1,196 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>ng-beacon</title>
-  </head>
-  <body>
-    <a href="https://medium.com/@urish/introducing-ng-beacons-344d79370593#.x6uhqakpg">ng-beacon</a>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>ng-beacon: Angular + Beacons</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400,400italic,600,600italic,800,800italic);
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: #fff;
+      font-family: "Open Sans", Helvetica, sans-serif;
+      font-size: 15pt;
+      font-weight: 400;
+      letter-spacing: 0.075em;
+      line-height: 1.65em;
+    }
+
+    .page-wrapper {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(images/beacon.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 0.1px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-wrapper header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .page-wrapper h1 {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      align-self: center;
+      margin: 32px 0 16px;
+    }
+
+    .slogan {
+      margin: 0 0 32px;
+    }
+
+    .page-wrapper h1:before,
+    .page-wrapper h1:after {
+      margin: 16px 0;
+      transition: width 0.85s ease;
+      transition-delay: 0.25s;
+      background: #fff;
+      content: '';
+      display: block;
+      height: 2px;
+      width: 400px;
+    }
+
+    h2 {
+      font-weight: normal;
+      text-align: center;
+    }
+
+    h3 {
+      font-weight: normal;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a.info-link {
+      display: block;
+    }
+
+    a.info-link::before {
+      content: "⇨ "
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .light-section {
+      background: #505393;
+      color: #d3d4e4;
+      padding: 32px 40px;
+    }
+
+    .dark-section {
+      background: #333;
+      color: #d3d4e4;
+      padding: 32px 40px;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 997px;
+    }
+
+    .code-snippet {
+      font-family: inconsolata, fixed;
+      white-space: pre-wrap;
+      background:#444;
+      padding: 16px;
+      border: solid 1px #777;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 32px 0;
+    }
+
+    .social-link {
+      display: inline-block;
+      font-size: 32px;
+    }
+
+    .social-link:not(:nth-of-type(1)) {
+      margin-left: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>ng-beacon</h1>
+      <div class="slogan">
+        JavaScript Smart Beacons
+      </div>
+    </header>
+    <section class="light-section">
+      <h2>Getting Started</h2>
+      <div class="content">
+        <a href="https://ngbeacon.io/config" class="info-link">
+          ng-beacon Configuration App
+        </a>
+        <a href="https://www.espruino.com/Reference" class="info-link">
+          Espruino Reference
+        </a>
+       <a href="https://github.com/urish/ng-beacon-firmware" class="info-link">
+          Firmware Updates
+        </a>
+      </div>
+    </section>
+    <section class="dark-section">
+      <h2>Code Snippets</h2>
+      <div class="content">
+        <h3>Blink the LED</h2>
+        <div class="code-snippet">setInterval(() => LED1.toggle(), 500);</div>
+
+        <h3>Set up the button to toggle the LED</h2>
+        <div class="code-snippet"
+          >setWatch(() => LED1.toggle(), BTN1, { 
+  repeat: true,
+  edge: 'falling', 
+  debounce: 100
+});</div>
+
+        <h3>Switch to DFU (Device Firmware Update) mode</h2>
+        <div class="code-snippet">ngbeacon.dfu();</div>
+      </div>
+    </section>
+    <footer>
+      <a href="https://twitter.com/ngbeacon" class="social-link">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://medium.com/@urish" class="social-link">
+        <i class="fa fa-medium"></i>
+      </a>
+    </footer>
+  </div>
+</body>
+
 </html>

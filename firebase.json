@@ -3,8 +3,23 @@
     "public": "public",
     "redirects": [
       {
-        "source": "/",
+        "source": "1",
         "destination": "https://medium.com/@urish/introducing-ng-beacons-344d79370593#.x6uhqakpg",
+        "type": 302
+      },
+      {
+        "source": "2",
+        "destination": "https://medium.com/@urish/new-hardware-embedded-javascript-and-developer-friendly-updates-ng-beacon-levels-up-c23951c8f742",
+        "type": 302
+      },
+      {
+        "source": "7",
+        "destination": "https://urish.github.io/beacon-hunt-private/start.html",
+        "type": 302
+      },
+      {
+        "source": "luv",
+        "destination": "https://urish.github.io/beacon-hunt-private/luv2.html",
         "type": 302
       },
       {
